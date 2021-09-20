@@ -7,3 +7,32 @@ The application is built using:
 - Maven 3.6.3
 - Spring Boot 2.5.4
 - Lombok 1.18.20
+
+## Manual Deployment
+In order to manually deploy the application using CMD, follow these steps:
+1. Build the application.
+    ```
+    mvn clean install
+    ```
+2. Run the application.
+    ```
+    java -jar target/spring-boot-ssh-shell.jar
+    ```
+
+## Usage
+In order to connect to the SSH Shell and run the tasks:
+1. Open a new CMD window.
+2. Connect to the SSH Shell (default port is 2333).
+    ```
+    ssh -p 2333 user@localhost
+    ```
+3. Authenticate using the same username/password value (i.e. for the username _user_ the password is _user_).
+4. Run the command _help_ to view all the available commands.
+5. Run a command. For example:
+    ```
+    get-user-age username
+    ```
+6. Exit the SSH Shell.
+    ```
+    exit
+    ```
