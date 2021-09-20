@@ -10,14 +10,29 @@ The application is built using:
 
 ## Manual Deployment
 In order to manually deploy the application using CMD, follow these steps:
-1. Build the application.
+1. Package the application.
     ```
-    mvn clean install
+    mvn clean package
     ```
 2. Run the application.
     ```
     java -jar target/spring-boot-ssh-shell.jar
     ```
+    
+## Docker Deployment
+In order to deploy the application using Docker, follow these steps:
+1. Package the application.
+    ```
+    mvn clean package
+    ```
+2. Build the Docker image.
+    ```
+    docker build -t imousmoutis/spring-boot-ssh-shell:1.0.0 .
+    ```
+3. Run the Docker container.
+    ```
+    docker run -t imousmoutis/spring-boot-ssh-shell:1.0.0
+    ```  
 
 ## Usage
 In order to connect to the SSH Shell and run the tasks:
