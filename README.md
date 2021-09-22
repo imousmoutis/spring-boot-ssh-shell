@@ -31,7 +31,7 @@ In order to deploy the application using Docker, follow these steps:
     ```
 3. Run the Docker container.
     ```
-    docker run -t imousmoutis/spring-boot-ssh-shell:1.0.0
+    docker run -p 2333:2333 -t imousmoutis/spring-boot-ssh-shell:1.0.0
     ```  
 
 ## Usage
